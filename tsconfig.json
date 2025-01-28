@@ -21,6 +21,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
     "types": ["lit"],
     "plugins": [
       {
@@ -30,5 +31,5 @@
     ]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["demo/**/*.ts"]
+  "exclude": ["demo/**/*.ts", "*.d.ts", "**/*.d.ts"]
 }
