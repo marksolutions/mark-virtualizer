@@ -18,4 +18,3 @@ declare global {
     'mark-virtualizer': LitVirtualizer;
   }
 }
-
