@@ -1,5 +1,5 @@
 {
-  "name": "@markai/mark-virtualizer",
+  "name": "@markai/virtualizer",
   "version": "0.0.0-development",
   "description": "Viewport-based virtualization (virtual scrolling) for Lit",
   "author": "Google LLC",

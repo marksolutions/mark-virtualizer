@@ -5,22 +5,22 @@ jobs:
       - image: cimg/node:lts
     steps:
       - checkout
-      - run: yarn install --frozen-lockfile --non-interactive
+      - run: npm i
       - run:
           name: Deploy
           command: |
             export NPM_TOKEN=${SNAPSHOT_NPM_TOKEN}
             npm config set ${NPM_PACKAGE_SCOPE}:registry ${NPM_SNAPSHOT_REPO}
-            yarn build
+            npm run build
             npx semantic-release
   release:
     docker:
       - image: cimg/node:lts
     steps:
       - checkout
-      - run: yarn install --frozen-lockfile --non-interactive
+      - run: npm i
       - run: echo "Running release job"
-      - run: yarn build
+      - run: npm run build
       - run:
           name: Deploy
           command: npx semantic-release

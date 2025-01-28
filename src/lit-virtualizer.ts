@@ -11,10 +11,10 @@ export {RangeChangedEvent, VisibilityChangedEvent} from './events.js';
 /**
  * Import this module to declare the lit-virtualizer custom element.
  */
-customElements.define('mark-virtualizer', LitVirtualizer);
+customElements.define('lit-virtualizer', LitVirtualizer);
 
 declare global {
   interface HTMLElementTagNameMap {
-    'mark-virtualizer': LitVirtualizer;
+    'lit-virtualizer': LitVirtualizer;
   }
 }
