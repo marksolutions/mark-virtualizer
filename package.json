@@ -18,11 +18,26 @@
   "devDependencies": {
     "@open-wc/testing": "^3.1.6",
     "@web/dev-server-esbuild": "^0.3.0",
+    "semantic-release": "^19.0.5",
     "tachometer": "^0.7.0",
     "typescript": "^5.7.3"
   },
   "dependencies": {
     "lit": "^3.2.0",
     "tslib": "^2.0.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      {
+        "name": "feature/*",
+        "prerelease": "${name.replace(/^feature\\//g, \"\")}",
+        "channel": "${name.replace(/^feature\\//g, \"\")}"
+      }
+    ]
   }
 }
